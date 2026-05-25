@@ -1,0 +1,47 @@
+DirectoryIndex index.html
+Options -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+najam-satora\.html[\s?] [NC]
+  RewriteRule ^najam-satora\.html$ /najam-satora-za-proslave [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+najam-satora-za-proslave\.html[\s?] [NC]
+  RewriteRule ^najam-satora-za-proslave\.html$ /najam-satora-za-proslave [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+galerija\.html[\s?] [NC]
+  RewriteRule ^galerija\.html$ /galerija [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+kontakt\.html[\s?] [NC]
+  RewriteRule ^kontakt\.html$ /kontakt [R=301,L]
+
+  RewriteRule ^najam-satora-za-proslave/?$ najam-satora-za-proslave.html [L]
+  RewriteRule ^galerija/?$ galerija.html [L]
+  RewriteRule ^kontakt/?$ kontakt.html [L]
+</IfModule>
+
+AddType image/webp .webp
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>

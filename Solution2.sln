@@ -1,5 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{A2C8EB7E-6D7E-4E09-A791-5853D8E7C902}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		najam-satora-za-proslave.html = najam-satora-za-proslave.html
+		o-nama.html = o-nama.html
+		galerija.html = galerija.html
+		kontakt.html = kontakt.html
+		styles.css = styles.css
+		script.js = script.js
+		assets\hero.jpg = assets\hero.jpg
+		assets\intro-tent.jpg = assets\intro-tent.jpg
+		assets\featured-tent.jpg = assets\featured-tent.jpg
+		assets\equipment-tent.jpg = assets\equipment-tent.jpg
+		assets\location-interior.jpg = assets\location-interior.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
